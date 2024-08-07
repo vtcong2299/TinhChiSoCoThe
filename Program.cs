@@ -22,7 +22,8 @@ namespace TinhChiSoCoThe
             Console.Write("Nhập cân nặng của bạn (kg): ");
             weight=float.Parse(Console.ReadLine());
 
-            bmi=weight/(height*2);
+            bmi= weight/(float)Math.Pow(height,2);
+            bmi = (float)Math.Round(bmi, 2);
             Console.WriteLine("BMI: "+ bmi);
             if (bmi>=30)
             {
